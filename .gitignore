@@ -2,4 +2,13 @@
 .claude
 .playwright-mcp
 docs/
-scripts/
+
+# build output (Cloudflare regenerates via `npm run build`)
+dist/
+node_modules/
+*.log
+/*.png
+
+# keep build script tracked, ignore the one-off asset downloaders
+scripts/download-assets.mjs
+scripts/download-ivan-assets.mjs

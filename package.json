@@ -1,0 +1,9 @@
+{
+  "name": "wafi-lina-invitation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wafi & Lina wedding invitation (static)",
+  "scripts": {
+    "build": "node scripts/build-dist.mjs"
+  }
+}
