@@ -134,18 +134,20 @@
   <section id="wish" class="sec sec-wish">
     <img class="sketch-text text-rsvp reveal" src="assets/ivan/text-rsvp.png" alt="RSVP Konfirmasi Kehadiran">
     <div class="rsvp-counts reveal">
-      <div class="rc"><span class="rc-n">6</span><span class="rc-l">Hadir</span></div>
-      <div class="rc"><span class="rc-n">7</span><span class="rc-l">Tidak Hadir</span></div>
-      <div class="rc"><span class="rc-n">10</span><span class="rc-l">Masih Ragu</span></div>
+      <div class="rc"><span class="rc-n" data-k="Hadir">0</span><span class="rc-l">Hadir</span></div>
+      <div class="rc"><span class="rc-n" data-k="Tidak Hadir">0</span><span class="rc-l">Tidak Hadir</span></div>
+      <div class="rc"><span class="rc-n" data-k="Masih Ragu">0</span><span class="rc-l">Masih Ragu</span></div>
     </div>
-    <form class="rsvp-form reveal" onsubmit="return false">
-      <input type="text" class="wf" placeholder="Nama">
-      <textarea class="wf" placeholder="Ucapan"></textarea>
-      <select class="wf">
-        <option disabled selected>Konfirmasi Kehadiran</option>
+    <form class="rsvp-form reveal" id="rsvpForm">
+      <input type="text" class="wf" name="nama" placeholder="Nama" maxlength="60" required>
+      <textarea class="wf" name="ucapan" placeholder="Ucapan" maxlength="600"></textarea>
+      <select class="wf" name="kehadiran" required>
+        <option value="" disabled selected>Konfirmasi Kehadiran</option>
         <option>Hadir</option><option>Tidak Hadir</option><option>Masih Ragu</option>
       </select>
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="btn-kirim">Kirim</button>
+      <p class="rsvp-msg" id="rsvpMsg" hidden></p>
     </form>
     <ul class="comments" id="comments"></ul>
   </section>
@@ -156,12 +158,18 @@
     <div class="gallery-grid">
       <div class="g-item reveal"><img src="assets/photos/w20.jpg" alt=""></div>
       <div class="g-item reveal"><img src="assets/photos/w5.jpg" alt=""></div>
+      <div class="g-item reveal"><img src="assets/photos/w21.jpg" alt=""></div>
+      <div class="g-item reveal"><img src="assets/photos/w6.jpg" alt=""></div>
       <div class="g-item reveal"><img src="assets/photos/w1.jpg" alt=""></div>
       <div class="g-item reveal"><img src="assets/photos/w9.jpg" alt=""></div>
       <div class="g-item reveal"><img src="assets/photos/w10.jpg" alt=""></div>
       <div class="g-item reveal"><img src="assets/photos/w8.jpg" alt=""></div>
       <div class="g-item reveal"><img src="assets/photos/w15.jpg" alt=""></div>
       <div class="g-item reveal"><img src="assets/photos/w17.jpg" alt=""></div>
+      <div class="g-item reveal"><img src="assets/photos/w22.jpg" alt=""></div>
+      <div class="g-item reveal"><img src="assets/photos/w23.jpg" alt=""></div>
+      <div class="g-item reveal"><img src="assets/photos/w24.jpg" alt=""></div>
+      <div class="g-item reveal"><img src="assets/photos/w25.jpg" alt=""></div>
       <div class="g-item reveal"><img src="assets/photos/w14.jpg" alt=""></div>
       <div class="g-item reveal"><img src="assets/photos/w16.jpg" alt=""></div>
     </div>
