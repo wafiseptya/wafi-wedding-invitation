@@ -186,6 +186,17 @@
 
 </main>
 
+<!-- lightbox -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery" hidden>
+  <button class="lb-close" id="lbClose" aria-label="Tutup">&#10005;</button>
+  <div class="lb-stage" id="lbStage">
+    <img class="lb-img" id="lbImg" src="" alt="">
+  </div>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Sebelumnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 5-7 7 7 7"/></svg></button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Berikutnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 5 7 7-7 7"/></svg></button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
 <!-- audio -->
 <button id="audioBtn" class="audio-btn" aria-label="Music"><span class="ic-pause">&#10074;&#10074;</span><span class="ic-play" hidden>&#9654;</span></button>
 <audio id="music" loop preload="auto" src="assets/audio/music.mp3"></audio>
