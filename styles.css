@@ -189,6 +189,9 @@ body.invited .bottom-nav{opacity:1;pointer-events:auto;transform:translateX(-50%
 /* event address line + ngunduh mantu text heading */
 .ev-addr{font-family:var(--script);font-size:20px;font-weight:600;color:var(--olive);line-height:1.25;margin:2px auto 0;max-width:280px}
 .text-ngunduh{font-family:var(--script);font-size:40px;font-weight:700;color:var(--purple);margin:46px 0 10px;line-height:1}
+[data-dest][hidden]{display:none!important}
+html.dest-1 [data-dest="2"],html.dest-2 [data-dest="1"]{display:none!important}
+.arch-card.dest-2 .text-ngunduh{margin-top:10px}
 
 /* ===== GALLERY ===== */
 .sec-gallery{padding:20px 24px 50px}

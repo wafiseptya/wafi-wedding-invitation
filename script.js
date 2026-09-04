@@ -4,6 +4,12 @@
   /* guest name from ?to= */
   try { var to = new URLSearchParams(location.search).get('to'); if (to) { var g = document.getElementById('guestName'); if (g) g.textContent = to; } } catch (e) {}
 
+  /* destination from ?destination= (1 = akad + resepsi 20 Sep, 2 = ngunduh mantu 23 Sep). Default 1 */
+  var dest = document.documentElement.classList.contains('dest-2') ? '2' : '1';
+  document.querySelectorAll('[data-dest]').forEach(function (el) { el.hidden = el.getAttribute('data-dest') !== dest; });
+  var card = document.querySelector('.arch-card');
+  if (card) card.classList.add('dest-' + dest);
+
   /* scroll lock until open */
   var locked = true;
   document.body.style.overflow = 'hidden';
@@ -40,7 +46,7 @@
   /* countdown */
   var cd = document.querySelector('.countdown');
   if (cd) {
-    var target = new Date(cd.getAttribute('data-target')).getTime();
+    var target = new Date(cd.getAttribute('data-target-' + dest) || cd.getAttribute('data-target')).getTime();
     var n = {}; cd.querySelectorAll('.cd-n').forEach(function (x) { n[x.getAttribute('data-u')] = x; });
     var p = function (v) { return String(v).padStart(2, '0'); };
     function tick() {
