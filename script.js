@@ -6,9 +6,6 @@
 
   /* destination from ?destination= (1 = akad + resepsi 20 Sep, 2 = ngunduh mantu 23 Sep). Default 1 */
   var dest = document.documentElement.classList.contains('dest-2') ? '2' : '1';
-  document.querySelectorAll('[data-dest]').forEach(function (el) { el.hidden = el.getAttribute('data-dest') !== dest; });
-  var card = document.querySelector('.arch-card');
-  if (card) card.classList.add('dest-' + dest);
 
   /* scroll lock until open */
   var locked = true;
